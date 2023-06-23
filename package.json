@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "e2e": "cypress run",
     "e2e:open": "cypress open",
+    "e2e:percy": "PERCY_TOKEN=web_7bcfd0aa871595be21d1bac424c13788f5ea14332e3f045298153e0c1c0d529d percy exec -- cypress run",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_9b88d552b59b0d5"
@@ -20,6 +21,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@percy/cli": "1.26.0",
+    "@percy/cypress": "3.1.2",
     "@storybook/addon-essentials": "7.0.23",
     "@storybook/addon-interactions": "7.0.23",
     "@storybook/addon-links": "7.0.23",
