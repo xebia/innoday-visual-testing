@@ -5,6 +5,8 @@ describe("Home page", () => {
 
     cy.percySnapshot("Counter");
 
+    cy.argosScreenshot("home");
+
     cy.get("button").click();
 
     cy.percySnapshot("Counter incremented");
