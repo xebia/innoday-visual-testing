@@ -13,6 +13,6 @@ jobs:
         with:
           start: npm run start
       - name: Upload screenshots
-        run: npx @argos-ci/cli upload ./screenshots
+        run: npx @argos-ci/cli upload ./cypress/screenshots
         env:
           ARGOS_TOKEN: 3048a569cac437c21867986b0623f3429ced3aff
