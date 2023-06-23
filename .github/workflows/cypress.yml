@@ -12,3 +12,7 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           start: npm run start
+      - name: Upload screenshots
+        run: npx @argos-ci/cli upload ./screenshots
+        env:
+          ARGOS_TOKEN: 3048a569cac437c21867986b0623f3429ced3aff
