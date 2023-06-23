@@ -1,0 +1,17 @@
+name: Percy
+
+on: push
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+      - name: Install dependencies
+        run: npm i
+      - run: npm run e2e:percy
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

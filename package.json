@@ -9,9 +9,10 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "e2e": "cypress run",
+    "e2e": "start-server-and-test start 5173 e2e:run",
+    "e2e:run": "cypress run",
     "e2e:open": "cypress open",
-    "e2e:percy": "PERCY_TOKEN=web_7bcfd0aa871595be21d1bac424c13788f5ea14332e3f045298153e0c1c0d529d percy exec -- cypress run",
+    "e2e:percy": "PERCY_TOKEN=web_7bcfd0aa871595be21d1bac424c13788f5ea14332e3f045298153e0c1c0d529d percy exec -- npm run e2e",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_9b88d552b59b0d5"
@@ -42,6 +43,7 @@
     "eslint-plugin-react-refresh": "^0.3.4",
     "eslint-plugin-storybook": "0.6.12",
     "prop-types": "15.8.1",
+    "start-server-and-test": "2.0.0",
     "storybook": "7.0.23",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
