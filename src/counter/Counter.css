@@ -6,7 +6,7 @@ button {
 }
 
 .primary {
-  background-color: rebeccapurple;
+  background-color: orange;
   color: white;
 
   &:hover {
