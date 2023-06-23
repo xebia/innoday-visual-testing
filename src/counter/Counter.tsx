@@ -10,7 +10,7 @@ export const Counter = ({
 
   return (
     <button className={variant} onClick={() => setCount((count) => count + 1)}>
-      Counter {count}
+      Count is {count}
     </button>
   );
 };
