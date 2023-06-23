@@ -5,12 +5,15 @@
   "type": "module",
   "scripts": {
     "start": "npm run dev",
+    "serve": "npm run build && serve -p 5173 -L dist",
+    "cypress": "start-server-and-test serve http://127.0.0.1:5173/ 'cypress run'",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "e2e": "cypress run",
     "e2e:open": "cypress open",
+    "argos": "ARGOS_TOKEN=3048a569cac437c21867986b0623f3429ced3aff argos upload cypress/screenshots",
     "e2e:percy": "PERCY_TOKEN=web_7bcfd0aa871595be21d1bac424c13788f5ea14332e3f045298153e0c1c0d529d percy exec -- cypress run",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -21,6 +24,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@argos-ci/cli": "^0.4.4",
+    "@argos-ci/cypress": "^0.0.7",
     "@percy/cli": "1.26.0",
     "@percy/cypress": "3.1.2",
     "@storybook/addon-essentials": "7.0.23",
@@ -40,6 +45,8 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "serve": "^14.2.0",
+    "start-server-and-test": "^2.0.0",
     "eslint-plugin-storybook": "0.6.12",
     "prop-types": "15.8.1",
     "storybook": "7.0.23",
