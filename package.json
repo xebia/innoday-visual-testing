@@ -5,18 +5,23 @@
   "type": "module",
   "scripts": {
     "start": "npm run dev",
+    "serve": "npm run build && serve -p 5173 -L dist",
+    "cypress": "start-server-and-test serve http://127.0.0.1:5173/ 'cypress run'",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "e2e": "cypress run",
-    "e2e:open": "cypress open"
+    "e2e:open": "cypress open",
+    "argos": "ARGOS_TOKEN=3048a569cac437c21867986b0623f3429ced3aff argos upload cypress/screenshots"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@argos-ci/cli": "^0.4.4",
+    "@argos-ci/cypress": "^0.0.7",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
@@ -26,6 +31,8 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "serve": "^14.2.0",
+    "start-server-and-test": "^2.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
   }
