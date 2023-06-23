@@ -1,6 +1,9 @@
 name: Percy
 
-on: push
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   ci:
