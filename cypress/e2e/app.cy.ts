@@ -6,6 +6,7 @@ describe("Home page", () => {
     cy.percySnapshot("Counter");
 
     cy.argosScreenshot("home");
+    cy.get("body").happoScreenshot();
 
     cy.get("button").click();
 
