@@ -11,14 +11,16 @@
     "preview": "vite preview",
     "e2e": "start-server-and-test start 5173 e2e:run",
     "e2e:run": "cypress run",
-    "e2e:open": "cypress open",
+    "e2e:open": "APPLITOOLS_API_KEY=SROlz102GrHBE7eTQMoU2cxiOP106VFMPs7phNmhQnxTZdE110 cypress open",
     "e2e:percy": "PERCY_TOKEN=web_7bcfd0aa871595be21d1bac424c13788f5ea14332e3f045298153e0c1c0d529d percy exec -- npm run e2e",
     "e2e:happo": "HAPPO_CONFIG_FILE=./.happo.cjs npx happo-e2e -- npm run e2e",
+    "e2e:applitools": "APPLITOOLS_API_KEY=SROlz102GrHBE7eTQMoU2cxiOP106VFMPs7phNmhQnxTZdE110 npm run e2e",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_9b88d552b59b0d5"
   },
   "dependencies": {
+    "@applitools/eyes-cypress": "3.33.1",
     "@argos-ci/cypress": "^0.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
